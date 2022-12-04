@@ -1,0 +1,64 @@
+﻿@{
+    @model TP2.Models.Person
+
+}
+@{
+    ViewData["Title"] = " PERSON INFOS ";
+}
+
+
+
+@{
+    TP2.Models.Person p = Model;
+    if (Model == null)
+    {
+    <h1 class="alert-danger">
+                This person is not found !
+    </h1>
+    }
+    else
+    {<div style="padding-left:200px;padding-top:30px;margin-top:100px;margin-left:200px;margin-right:200px;padding-bottom:10px; border-radius:10px;background-color:navajowhite">
+            <h1 style="color:hotpink">Informations of Person @p.id</h1>
+            <br/>
+            <dl class="row ">
+                <dt class="col-sm-2" style="color:cadetblue ">
+                    Id
+                </dt>
+                <dd class="col-sm-10" style="color:black">
+                    @p.id
+                </dd>
+                <dt class="col-sm-2" style="color:cadetblue">
+                    First Name
+                </dt>
+                    <dd class="col-sm-10" style="color:black">
+                    @p.first_name
+                </dd>
+                <dt class="col-sm-2" style="color:cadetblue">
+                    Last Name
+                </dt>
+                    <dd class="col-sm-10" style="color:black">
+                    @p.last_name
+                </dd>
+                <dt class="col-sm-2" style="color:cadetblue">
+                    Email
+                </dt>
+                    <dd class="col-sm-10" style="color:black">
+                    @p.email
+                </dd>
+                <dt class="col-sm-2" style="color:cadetblue">
+                    Image Url
+                </dt>
+                    <dd class="col-sm-10" style="color:black">
+                    @p.image
+                </dd>
+                <dt class="col-sm-2" style="color:cadetblue">
+                    Country
+                </dt>
+                    <dd class="col-sm-10" style="color:black">
+                    @p.country
+                </dd>
+            </dl>
+    </div>
+
+    }
+}
